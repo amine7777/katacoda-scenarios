@@ -4,4 +4,4 @@ Ansible is an open-source software provisioning, configuration management, and a
 
 I am sure it s still confusing in your head but in order to make it easier for you I am going to simplify a bit. Ansible is like shell linux. It's so powerful and could control either the software or hardware of any linux based machine or Windows. However, the difference is that Ansible manages very well its variables. Indeed, Ansible reduce the complexity and also the repeated tasks by making generic and reused variables to factor the common elements of a task. Plus it s using Jinja2 for making dynamic templates of any configurations.
 
-![](./img/ansible02.png)
+![](./assets/ansible02.png)
