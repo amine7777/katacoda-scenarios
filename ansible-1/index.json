@@ -8,9 +8,6 @@
       {
         "title": "Step 1",
         "text": "step1.md"
-        "files": [
-    "app.js", "index.js"
-]
       },
       {
         "title": "Step 2",
@@ -36,6 +33,9 @@
       "text": "finish.md"
     }
   },
+  "files": [
+"app.js", "index.js"
+],
   "environment": {
     "uilayout": "editor-terminal"
   },
