@@ -34,10 +34,14 @@
     }
   },
   "files": [
-"app.js", "index.js"
+"app.yml", "index.yml"
 ],
   "environment": {
-    "uilayout": "editor-terminal"
+    "hidefinish": true,
+    "hideHiddenFiles": true,
+    "uilayout": "editor-terminal",
+    "uisettings": "yaml",
+    "uieditorpath": "/home/scrapbook/tutorial/example"
   },
   "backend": {
     "imageid": "ansible-centos"
