@@ -37,4 +37,11 @@ Here is an example.
       debug:
         msg: 'Holà Chavales'
 ```
+
+You can run these plays by running the following command
+
+```bash
+ansible-playbook <playbook_names>.yml
+```
+
 Let's explore a bit what we can find inside a play.
