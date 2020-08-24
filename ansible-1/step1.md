@@ -1,5 +1,5 @@
 # Introduction
-Ansible is tool which is very easy to use. Ansible uses YAML and JINJA2 languages to describe all the configurations. The main concepts of Ansible are the following:
+Ansible is tool which is very easy to use. Ansible uses YAML and JINJA2 languages to describe all the configurations. T
 
 ### Playbook
 
@@ -15,6 +15,10 @@ This the simplest playbook that we could create.
         msg: 'Holà Chavales'
 ```
 `abs kff`{{copy}}
+
+<pre class="file" data-target="clipboard">
+Copy Me To The Clipboard!!
+</pre>
 
 `this sparta`
 ### Hosts
