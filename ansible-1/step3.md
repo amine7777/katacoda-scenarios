@@ -29,3 +29,31 @@ Then we are going to add this task at the end of *simple_playbook.yml* just belo
 Now we can execute our playbook using this command.
 
 `ansible-playbook -i inventory simple_playbook.yml`{{execute}}
+
+`ls -la -F`{{execute}}
+
+We can see now the folder has been created.
+
+What if we need more folders for example a list of folders
+
+Let's replace the task that we have added before with this task.
+
+<pre class="file" data-target="clipboard">
+- name: Create folders
+  file:
+    path: /home/scrapbook/tutorial/{{ item }}
+    state: directory
+    owner: scrapbook
+    group: scrapbook
+    mode: 0755
+  with_items:
+    - folder1
+    - folder2
+    - folder3      
+</pre>
+
+let's execute the playbook again.
+
+`ansible-playbook -i inventory simple_playbook.yml`{{execute}}
+
+`ls -la -F`{{execute}}
