@@ -31,4 +31,26 @@ Now we can re-execute the playbook.
 
  `ansible-playbook -i inventory/inventory_file simple_playbook.yml`{{execute}}
 
- 
+ After executing the playbook we can execute another play but this time using the folder list in group_vars.
+
+ We can replace the play in **simple_playbook.yml** with the play below.
+
+<pre class="file" data-target="clipboard">
+ - hosts: dev
+   connection: local
+   vars:
+     file_path: 'group_vars/all/main.yml'
+   tasks:
+     - name: Create folders
+       file:
+         path: /home/scrapbook/tutorial/{{ item }}
+         state: directory
+         owner: scrapbook
+         group: scrapbook
+         mode: 0755
+       changed_when: false
+       with_items:
+         - '{{ folder_list }}'
+</pre>
+
+ After executing this play it will change nothing because these folders have been already created. We can see in the recap at the end of the execution that the tasks are skipped. 
