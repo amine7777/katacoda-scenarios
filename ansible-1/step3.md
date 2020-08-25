@@ -12,7 +12,7 @@ localhost_machine  ansible_ssh_host=localhost
 localhost_machine
 </pre>
 
-Now we have our localhost machine in **dev** group. We need to replace localhost in **simple_playbook.yml** by **dev**
+Now we have our localhost machine in **dev** group. We need to replace **localhost** in **simple_playbook.yml** by **dev**
 
 Then we are going to add this task at the end of **simple_playbook.yml** just below the first task.
 
@@ -78,9 +78,9 @@ The **file** module could also create files by changing the state. We are going 
     mode: 0755
   with_items:
     - group_vars/all/main.yml
-    - roles/tasks/main.yml
-    - roles/templates/template.j2.yml
-    - roles/vars/main.yml
+    - roles/my_role/tasks/main.yml
+    - roles/my_role/templates/template.j2.yml
+    - roles/my_role/vars/main.yml
 </pre>
 
 Let's run the playbook to create these files.
@@ -92,3 +92,5 @@ Let's run the playbook to create these files.
 `ls -la -F`{{execute}}
 
 `cd ..`{{execute}}
+
+Now we have an organized playbook which match with the Ansible default config.
