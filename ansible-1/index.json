@@ -1,0 +1,49 @@
+{
+  "title": "Ansible quick start",
+  "description": "Learn how to use Ansible",
+  "difficulty": "Beginner",
+  "time": "15 min",
+  "details": {
+    "steps": [
+      {
+        "title": "Step 1",
+        "text": "step1.md"
+      },
+      {
+        "title": "Step 2",
+        "text": "step2.md"
+      },
+      {
+        "title": "Step 3",
+        "text": "step3.md"
+      },
+      {
+        "title": "Step 4",
+        "text": "step4.md"
+      },
+      {
+        "title": "Step 5",
+        "text": "step5.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md"
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "files": [
+"simple_playbook.yml", "multiple_plays.yml", "inventory"
+],
+  "environment": {
+    "hidefinish": true,
+    "hideHiddenFiles": true,
+    "uilayout": "editor-terminal",
+    "uisettings": "yaml",
+    "uieditorpath": "/home/scrapbook/tutorial/"
+  },
+  "backend": {
+    "imageid": "ansible-centos"
+  }
+}
