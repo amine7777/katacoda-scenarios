@@ -28,4 +28,4 @@ Then we are going to add this task at the end of *simple_playbook.yml* just belo
 
 Now we can execute our playbook using this command.
 
-`ànsible-playbook -i inventory simple_playbook.yml`{{execute}}
+`ansible-playbook -i inventory simple_playbook.yml`{{execute}}
