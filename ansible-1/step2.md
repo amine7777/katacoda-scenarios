@@ -30,5 +30,7 @@ ansible_ssh_common_args='-o ProxyCommand="ssh -i ~/.ssh/<private_key> centos@34.
 ```
 
 We can verify if Ansible reach all the hosts by running this command.
+`ansible all -m ping`
 
-`ansible all -m ping`{{execute}}
+In our case the host that we are targeting is localhost.
+ `ansible localhost -m ping `{{execute}}
