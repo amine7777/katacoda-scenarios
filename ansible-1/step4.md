@@ -48,9 +48,13 @@ Now we can re-execute the playbook.
          owner: scrapbook
          group: scrapbook
          mode: 0755
-       changed_when: false
        with_items:
          - '{{ folder_list }}'
 </pre>
 
- After executing this play it will change nothing because these folders have been already created. We can see in the recap at the end of the execution that the tasks are skipped. 
+ After executing this play it will change nothing because these folders have been already created. We can see in the recap at the end of the execution that the tasks are green which means that the folders exists already.
+
+ What's vars_files ?
+
+ vars_files is a list of files which contains variables. If you have a specific variables for your tasks you can create a file where your will store these variables.
+ 
