@@ -10,12 +10,15 @@ To install Ansible you need python and pip installed.
 `pip3 --version`{{execute}}
 
 Let's update pip3.
+
 `pip3 install --upgrade pip`{{execute}}
 
 We need to update ubuntu.
+
 `apt-get update`{{execute}}
 
 Now we can install the last version of Ansible by using this command.
+
 `pip3 install ansible`{{execute}}
 
 # What is a playbook?
