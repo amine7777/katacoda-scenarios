@@ -1,8 +1,8 @@
 {
-  "title": "Ansible 1",
-  "description": "Learn how to use Ansible 1",
+  "title": "Ansible quick start",
+  "description": "Learn how to use Ansible",
   "difficulty": "Beginner",
-  "time": "10 min",
+  "time": "15 min",
   "details": {
     "steps": [
       {

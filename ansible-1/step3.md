@@ -3,7 +3,7 @@ As we know now, Ansible is a tool for provisioning and automating tasks. A task 
 
 Let's see how to create directories using *file* module.
 
-First, in this step we are going to create an inventory file.
+First, in this step we are going to create an inventory file '*inventory_file*'.
 
 <pre class="file" data-target="clipboard">
 localhost_machine  ansible_ssh_host=localhost
@@ -19,7 +19,7 @@ Then we are going to add this task at the end of *simple_playbook.yml* just belo
 <pre class="file" data-target="clipboard">
 - name: Create a folder
   file:
-    path: /home/scrapbook/tutorial/my_new_folder
+    path: /home/scrapbook/tutorial/group_vars
     state: directory
     owner: scrapbook
     group: scrapbook
@@ -28,7 +28,7 @@ Then we are going to add this task at the end of *simple_playbook.yml* just belo
 
 Now we can execute our playbook using this command.
 
-`ansible-playbook -i inventory simple_playbook.yml`{{execute}}
+`ansible-playbook -i inventory_file simple_playbook.yml`{{execute}}
 
 `ls -la -F`{{execute}}
 
@@ -47,9 +47,12 @@ Let's replace the task that we have added before with this task.
     group: scrapbook
     mode: 0755
   with_items:
-    - folder1
-    - folder2
-    - folder3      
+    - inventory
+    - roles
+    - group_vars/all
+    - roles/tasks
+    - roles/templates
+    - roles/vars     
 </pre>
 
 let's execute the playbook again.
@@ -57,3 +60,24 @@ let's execute the playbook again.
 `ansible-playbook -i inventory simple_playbook.yml`{{execute}}
 
 `ls -la -F`{{execute}}
+
+Now that we have created an inventory folder we can move the *inventory_file* there.
+
+`mv inventory_file inventory/`{{execute}}
+
+The *file* module could also create files by changing the state.
+
+<pre class="file" data-target="clipboard">
+- name: Create folders
+  file:
+    path: /home/scrapbook/tutorial/{{ item }}
+    state: touch
+    owner: scrapbook
+    group: scrapbook
+    mode: 0755
+  with_items:
+    - group_vars/all/main.yml
+    - roles/tasks/main.yml
+    - roles/templates/template.j2.yml
+    - roles/vars/main.yml
+</pre>
