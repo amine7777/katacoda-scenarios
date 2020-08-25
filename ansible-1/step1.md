@@ -1,6 +1,23 @@
 # Introduction
 Ansible is tool which is very easy to use. Ansible uses YAML and JINJA2 languages to describe all the configurations.
 
+# How to install Ansible?
+
+To install Ansible you need python and pip installed.
+
+`python3 --version`{{execute}}
+
+`pip3 --version`{{execute}}
+
+Let's update pip3.
+`pip3 install --upgrade pip`{{execute}}
+
+We need to update ubuntu.
+`apt-get update`{{execute}}
+
+Now we can install the last version of Ansible by using this command.
+`pip3 install ansible`{{execute}}
+
 # What is a playbook?
 
 A playbook is a file which describes a set of configuration management scripts that define how tasks are to be executed on remote hosts or a group of host machines. The scripts or instructions are written in YAML format. In fact, the elements inside the playbooks could either defined inside the playbook itself or in a different folders. The best practice is to create directories which makes your project more organized. Another special feature that could be interesting is that we could put many plays in one playbook.
