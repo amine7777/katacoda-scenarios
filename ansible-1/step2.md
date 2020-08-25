@@ -4,7 +4,7 @@ The hosts describes the target hosts. It can be a group of hosts a DNS of a mach
 
 In a play we can add directly the hosts or set up an inventory file where all the host are well organized.
 
-<img src="./assets/ansible-hosts.png" alt="drawing" width="100"/>
+<img src="./assets/ansible-hosts.jpg" alt="drawing" width="200"/>
 
 ## What is inventory?
 Inventory is a file where your remote hosts are grouped and organized. By this way you could target easily a lot of machines. It's also a file to set up all ssh configurations about the host machine.
