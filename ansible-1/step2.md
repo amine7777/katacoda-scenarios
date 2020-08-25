@@ -1,10 +1,10 @@
-## Waht is hosts?
+## What is hosts?
 
 The hosts describes the target hosts. It can be a group of hosts a DNS of a machine or just a name. All of these hosts might be described in an inventory folder where we need to define the host IP and the SSH user since Ansible is agentless and use SSH protocol to get connected to the machine. In order to make this happen you need to put your SSH public key in the authorized keys of your remote host even if the host machine is your localhost.
 
 In a play we can add directly the hosts or set up an inventory file where all the host are well organized.
 
-![](./assets/ansible-hosts.png)
+<img src="./assets/ansible-hosts.png" alt="drawing" width="500"/>
 
 ## What is inventory?
 Inventory is a file where your remote hosts are grouped and organized. By this way you could target easily a lot of machines. It's also a file to set up all ssh configurations about the host machine.

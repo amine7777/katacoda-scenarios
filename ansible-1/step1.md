@@ -16,7 +16,7 @@ This is the simplest playbook that we could create.
         msg: 'Holà Chavales'
 </pre>
 
-Let's copy this playbook in simple_playbook.yml and then execute the playbook with the following commands.
+Let's copy this playbook in *simple_playbook.yml* and then execute the playbook with the following commands.
 
 `cd /home/scrapbook/tutorial`{{execute}}
 
@@ -46,7 +46,7 @@ The file above describes a play. A playbook could integrate multiple plays. This
         msg: 'Holà Chavales'
 </pre>
 
-You can run these plays by copying them in multiple_plays.yml and running the following commands.
+You can run these plays by copying them in *multiple_plays.yml* and running the following commands.
 
 
 `ansible-playbook multiple_plays.yml`{{execute}}
