@@ -19,7 +19,9 @@ This is the simplest playbook that we could create.
 Let's copy this playbook in simple_playbook.yml and then execute the playbook with the following command.
 
 `cd /home/scrapbook/tutorial`{{execute}}
+
 `ls -la -F`{{execute}}
+
 `ansible-playbook simple_playbook.yml`{{execute}}
 
 The file above describes a play. A playbook could integrate multiple plays. This could be used to separate environments for example. We can create a play for each environment in the same playbook.
