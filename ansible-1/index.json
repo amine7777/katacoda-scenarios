@@ -34,14 +34,14 @@
     }
   },
   "files": [
-"app.yml", "index.yml"
+"simple_playbook.yml", "multiple_plays.yml"
 ],
   "environment": {
     "hidefinish": true,
     "hideHiddenFiles": true,
     "uilayout": "editor-terminal",
     "uisettings": "yaml",
-    "uieditorpath": "/home/scrapbook/tutorial/example"
+    "uieditorpath": "/home/scrapbook/tutorial/"
   },
   "backend": {
     "imageid": "ansible-centos"

@@ -7,14 +7,16 @@ In a play we can add directly the hosts or set up an inventory file where all th
 ![](./assets/ansible-hosts.png)
 
 ## What is inventory?
-Inventory is a file where your remote hosts are grouped and organized. By this way you could target easily a lot of machines.
+Inventory is a file where your remote hosts are grouped and organized. By this way you could target easily a lot of machines. It's also a file to set up all ssh configurations about the host machine.
 
 let's see how to create a hosts file.
 
 ```yaml
 
 localhost  ansible_ssh_host=localhost
+
 machine1   ansible_ssh_host=34.126.4.1     ansible_ssh_user=centos
+
 machine2   ansible_ssh_host=34.126.3.1     ansible_ssh_user=centos
 
 [dev]
@@ -26,3 +28,7 @@ machine2
 [prod:vars]
 ansible_ssh_common_args='-o ProxyCommand="ssh -i ~/.ssh/<private_key> centos@34.126.4.1 -W %h:%p"'
 ```
+
+We can verify if Ansible reach all the hosts by running this command.
+
+`ansible all -m ping`{{execute}}
