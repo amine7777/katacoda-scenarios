@@ -33,4 +33,4 @@ We can verify if Ansible reach all the hosts by running this command.
 `ansible all -m ping`
 
 In our case the host that we are targeting is localhost.
- `ansible localhost -m ping `{{execute}}
+ `ansible localhost -m ping`{{execute}}

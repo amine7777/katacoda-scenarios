@@ -34,7 +34,7 @@
     }
   },
   "files": [
-"simple_playbook.yml", "multiple_plays.yml"
+"simple_playbook.yml", "multiple_plays.yml", "inventory"
 ],
   "environment": {
     "hidefinish": true,
