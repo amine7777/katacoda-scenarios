@@ -17,7 +17,7 @@ localhost  ansible_ssh_host=localhost
 
 machine1   ansible_ssh_host=34.126.4.1     ansible_ssh_user=centos
 
-machine2   ansible_ssh_host=10.56.98.1     ansible_ssh_user=centos
+machine2   ansible_ssh_host=34.126.3.1     ansible_ssh_user=centos
 
 [dev]
 machine1

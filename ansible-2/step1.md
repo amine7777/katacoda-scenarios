@@ -1,0 +1,45 @@
+
+# What is Ansible Galaxy?
+
+
+
+
+<img src="./assets/galaxy.png" alt="ansible hosts" width="500"/>
+
+# How to use it?
+
+First, you need to search for the ansible galaxy role that you would like to install. You can check if the provider is trustworthy by checking his code. Then you need to run this command.
+
+`ansible-galaxy install amine7777.packer`{{execute}}
+
+`cd /etc/ansible/roles`{{execute}}
+
+`ls -la -F`{{execute}}
+
+`cd`{{execute}}
+
+the role will be stored either on **.ansible/roles** or **/etc/ansible/roles** you can even edit the role if you found out some errors.
+
+Now the role that we have choosen is to install packer on the machine. Let's make a play to install packer using this role.
+
+The default variables are the following
+```yaml
+packer_version: 1.5.6
+packer_arch: amd64
+packer_directory_path: /usr/local/bin
+packer_download_url: 'https://releases.hashicorp.com/packer/{{ packer_version }}/packer_{{ packer_version }}_linux_{{ packer_arch }}.zip'
+```
+Let's say we would like to install a new version 1.6.1. We need add a variable with the new version and copy this play in **simple_playbook.yml**.
+
+<pre class="file" data-target="clipboard">
+- hosts: localhost
+  connection: local
+  vars:
+    packer_version: 1.6.1
+  roles:
+    - role: amine7777.packer
+</pre>
+
+Then run the following command.
+
+`ansible-playbook simple_playbook.yml`{{execute}}
