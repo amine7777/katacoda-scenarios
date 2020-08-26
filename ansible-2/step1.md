@@ -9,7 +9,7 @@ First, you need to search for the ansible galaxy role that you would like to ins
 
 `ansible-galaxy install amine7777.packer`{{execute}}
 
-`cd /etc/ansible/roles`{{execute}}
+`cd .ansible/roles`{{execute}}
 
 `ls -la -F`{{execute}}
 
