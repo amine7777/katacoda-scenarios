@@ -8,6 +8,7 @@
       {
         "title": "Step 1",
         "text": "step1.md"
+        "code": "install-ansible.sh"
       },
       {
         "title": "Step 2",
@@ -40,6 +41,6 @@
     "uieditorpath": "/home/scrapbook/tutorial/"
   },
   "backend": {
-    "imageid": "ansible-centos"
+    "imageid": "ubuntu"
   }
 }
