@@ -1,9 +1,6 @@
 
 # What is Ansible Galaxy?
 
-
-
-
 <img src="./assets/galaxy.png" alt="ansible hosts" width="500"/>
 
 # How to use it?
