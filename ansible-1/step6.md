@@ -28,6 +28,6 @@ Now after setting tasks we need to change the **simple_playbook.yml** again and 
     - role: my_role
 </pre>
 
-`ansible-playbook -i inventory/inventory_file simple_playbook.yml -e "variable1='Holà Chicos'`{{execute}}
+`ansible-playbook -i inventory/inventory_file simple_playbook.yml -e "variable1='Holà Chicos'"`{{execute}}
 
 `cat my_config_file$`{{execute}}
