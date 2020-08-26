@@ -5,7 +5,7 @@ The roles directory contains all the roles that we could execute on the hosts. E
 <img src="./assets/ansible_skeleton.png" alt="ansible hosts" width="500"/>
 
 
-Let's put tasks in roles/my_role/tasks/main.yml.
+Let's put tasks in **roles/my_role/tasks/main.yml**.
 
 <pre class="file" data-target="clipboard">
 ---

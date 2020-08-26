@@ -21,8 +21,8 @@ Then we are going to add this task at the end of **simple_playbook.yml** just be
   file:
     path: /home/scrapbook/tutorial/group_vars
     state: directory
-    owner: scrapbook
-    group: scrapbook
+    owner: root
+    group: root
     mode: 0755    
 </pre>
 
@@ -43,8 +43,8 @@ Let's replace the task that we have added before with this task.
   file:
     path: /home/scrapbook/tutorial/{{ item }}
     state: directory
-    owner: scrapbook
-    group: scrapbook
+    owner: root
+    group: root
     mode: 0755
   with_items:
     - inventory
@@ -73,8 +73,8 @@ The **file** module could also create files by changing the state. We are going 
   file:
     path: /home/scrapbook/tutorial/{{ item }}
     state: touch
-    owner: scrapbook
-    group: scrapbook
+    owner: root
+    group: root
     mode: 0755
   with_items:
     - group_vars/all/main.yml
@@ -91,6 +91,6 @@ Let's run the playbook to create these files.
 
 `ls -la -F`{{execute}}
 
-`cd ..`{{execute}}
+`cd ../../`{{execute}}
 
 Now we have an organized playbook which match with the Ansible default config.

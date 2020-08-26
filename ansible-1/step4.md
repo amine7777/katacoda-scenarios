@@ -15,14 +15,14 @@ Let's see how to put a variable in a playbook. We can delete what's in **simple_
       blockinfile:
         path: '{{ file_path }}'
         block: |
-        folder_list:
-          - inventory
-          - roles
-          - group_vars/all
-          - roles/my_role
-          - roles/my_role/tasks
-          - roles/my_role/templates
-          - roles/my_role/vars
+          folder_list:
+            - inventory
+            - roles
+            - group_vars/all
+            - roles/my_role
+            - roles/my_role/tasks
+            - roles/my_role/templates
+            - roles/my_role/vars
 </pre>
 
 As you can above we have used a variable **file_path** which indicate the path to the main file of group_vars. With this play we will have a folder list which we can use it in another play.The **blockinfile** module helps us to make this possible. It's used to insert/update configurations.
@@ -45,8 +45,8 @@ Now we can re-execute the playbook.
        file:
          path: /home/scrapbook/tutorial/{{ item }}
          state: directory
-         owner: scrapbook
-         group: scrapbook
+         owner: root
+         group: root
          mode: 0755
        with_items:
          - '{{ folder_list }}'
@@ -54,7 +54,10 @@ Now we can re-execute the playbook.
 
  After executing this play it will change nothing because these folders have been already created. We can see in the recap at the end of the execution that the tasks are green which means that the folders exists already.
 
+`ansible-playbook -i inventory/inventory_file simple_playbook.yml -vvv`{{execute}}
+
+**-vvv** runs the very verbose mode
+
  What's vars_files ?
 
  vars_files is a list of files which contains variables. If you have a specific variables for your tasks you can create a file where your will store these variables.
- 

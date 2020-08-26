@@ -2,7 +2,7 @@
 
 Templates are used to create a generic and dynamic config files. Templates uses Jinja2 for templatization.
 
-First, we need to add this template to roles/my_role/templates/template.j2.yml
+First, we need to add this template to **roles/my_role/templates/template.j2.yml**
 
 <pre class="file" data-target="clipboard">
 {{ variable1 }}
@@ -22,7 +22,7 @@ Let's copy this play inside **simple_playbook.yml** file and replace the old pla
     - name: Create a config file
       template:
         src: roles/my_role/templates/template.j2.yml
-        dest: my_config_file.ym
+        dest: my_config_file.yml
 </pre>
 
 Now after executing this command you can notice that the config file has been created.
