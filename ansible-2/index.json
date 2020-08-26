@@ -23,7 +23,7 @@
       }
     ],
     "intro": {
-      "text": "intro.md"
+      "text": "intro.md",
       "code": "install-ansible.sh"
     },
     "finish": {
