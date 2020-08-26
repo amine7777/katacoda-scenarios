@@ -8,7 +8,7 @@
       {
         "title": "Step 1",
         "text": "step1.md",
-        "code": "install-ansible.sh"
+        "courseData": "install-ansible.sh"
       },
       {
         "title": "Step 2",
