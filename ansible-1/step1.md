@@ -9,11 +9,11 @@ To install Ansible you need python and pip installed.
 
 `pip3 --version`{{execute}}
 
-Let's update pip3.
+Let's upgrade pip3.
 
 `pip3 install --upgrade pip`{{execute}}
 
-We need to update ubuntu.
+We need to update ubuntu too.
 
 `apt-get update`{{execute}}
 
@@ -66,7 +66,7 @@ The file above describes a play. A playbook could integrate multiple plays. This
         msg: 'Holà Chavales'
 </pre>
 
-You can run these plays by copying them in *multiple_plays.yml* and running the following commands.
+You can run these plays by copying them in *multiple_plays.yml* and running the following command.
 
 
 `ansible-playbook multiple_plays.yml`{{execute}}

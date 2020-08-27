@@ -1,6 +1,6 @@
 ## What is hosts?
 
-The hosts describes the target hosts. It can be a group of hosts a DNS of a machine or just a name. All of these hosts might be described in an inventory folder where we need to define the host IP and the SSH user since Ansible is agentless and use SSH protocol to get connected to the machine. In order to make this happen you need to put your SSH public key in the authorized keys of your remote host even if the host machine is your localhost.
+The hosts describes the target hosts. It can be a group of hosts a DNS of a machine or just a name. All of these hosts might be described in an inventory folder where we need to define the host IP and the SSH user since Ansible is agentless and uses SSH protocol to get connected to the machine. In order to make this happen you need to put your SSH public key in the **~/.ssh/authorized_keys** of your remote host even if the host machine is your localhost.
 
 In a play we can add directly the hosts or set up an inventory file where all the host are well organized.
 
@@ -28,6 +28,8 @@ machine2
 [prod:vars]
 ansible_ssh_common_args='-o ProxyCommand="ssh -i ~/.ssh/<private_key> centos@34.126.4.1 -W %h:%p"'
 ```
+
+<img src="./assets/overview.png" alt="ansible overview" width="500"/>
 
 We can verify if Ansible reach all the hosts by running this command.
 `ansible all -m ping`

@@ -12,10 +12,11 @@ Let's put tasks in **roles/my_role/tasks/main.yml**.
 - name: Display a message
   debug:
     msg: 'This is a test'
+
 - name: Create a config file
   template:
     src: roles/my_role/templates/template.j2.yml
-    dest: my_config_file.ym
+    dest: my_config_file.yml
 </pre>
 
 Now after setting tasks we need to change the **simple_playbook.yml** again and replace the old play with this play.
@@ -24,10 +25,12 @@ Now after setting tasks we need to change the **simple_playbook.yml** again and 
 ---
 - hosts: dev
   connection: local
+  vars:
+    variable2: 'This is a second test'
   roles:
     - role: my_role
 </pre>
 
 `ansible-playbook -i inventory/inventory_file simple_playbook.yml -e "variable1='Holà Chicos'"`{{execute}}
 
-`cat my_config_file$`{{execute}}
+`cat my_config_file.yml`{{execute}}

@@ -69,7 +69,7 @@ Now that we have created an inventory folder we can move the **inventory_file** 
 The **file** module could also create files by changing the state. We are going to add yml files inside the folders to have an organized structure of the playbook.
 
 <pre class="file" data-target="clipboard">
-- name: Create folders
+- name: Create files
   file:
     path: /home/scrapbook/tutorial/{{ item }}
     state: touch
