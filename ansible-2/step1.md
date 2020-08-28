@@ -24,7 +24,6 @@ The default variables are the following
 packer_version: 1.5.6
 packer_arch: amd64
 packer_directory_path: /usr/local/bin
-packer_download_url: 'https://releases.hashicorp.com/packer/{{ packer_version }}/packer_{{ packer_version }}_linux_{{ packer_arch }}.zip'
 ```
 Let's say we would like to install a new version 1.6.1. We need add a variable with the new version and copy this play in **simple_playbook.yml**.
 
@@ -37,6 +36,8 @@ Let's say we would like to install a new version 1.6.1. We need add a variable w
     - role: amine7777.packer
 </pre>
 
-Then run the following command.
+Then run the following commands.
+
+`cd /home/scrapbook/tutorial`{{execute}}
 
 `ansible-playbook simple_playbook.yml`{{execute}}
