@@ -1,6 +1,8 @@
 
 # What is Ansible Galaxy?
 
+Ansible Galaxy is Ansible’s official hub for sharing Ansible content. Before thinking about creating an ansible roles you need to check if there is already the same role on ansible galaxy. Of course the ansible galaxy roles should be well maintained and well documented. On the other hand the same thing should be applied to make your customized roles very easy to use and understandable.
+
 <img src="./assets/galaxy.png" alt="ansible hosts" width="500"/>
 
 # How to use it?
@@ -12,6 +14,8 @@ First, you need to search for the ansible galaxy role that you would like to ins
 `cd .ansible/roles`{{execute}}
 
 `ls -la -F`{{execute}}
+
+As we can see the the Ansible galaxy role has been installed.
 
 `cd`{{execute}}
 
@@ -40,4 +44,12 @@ Then run the following commands.
 
 `cd /home/scrapbook/tutorial`{{execute}}
 
-`ansible-playbook simple_playbook.yml`{{execute}}
+`ls -la -F`{{execute}}
+
+We can see our playbook. Now, it's time to run it.
+
+`ansible-playbook simple_playbook.yml`{{execute
+
+Let's check if Packer has been installed on the local machine.
+
+`packer --version` {{execute}}
