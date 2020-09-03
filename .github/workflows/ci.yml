@@ -18,9 +18,3 @@ jobs:
       name: Validate Katacoda scenarios
       run: |
         katacoda validate:all --repo ${{ github.workspace }}
-
-    - id: validate-markdown
-      name: Validate Katacoda Markdown
-      run: |
-        sudo gem install mdl
-        mdl ${{ github.workspace }}
