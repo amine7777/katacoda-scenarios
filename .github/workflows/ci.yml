@@ -2,7 +2,7 @@ name: Validate Katacoda
 on: push
 jobs:
   build:
-    name: Validate
+    name: Validate Katacoda Scenarios
     runs-on: ubuntu-latest
     steps:
     - id: checkout-code
