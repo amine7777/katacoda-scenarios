@@ -1,36 +1,40 @@
-## What is hosts?
+## How to organize Ansible galaxy roles?
 
-The hosts describes the target hosts. It can be a group of hosts a DNS of a machine or just a name. All of these hosts might be described in an inventory folder where we need to define the host IP and the SSH user since Ansible is agentless and use SSH protocol to get connected to the machine. In order to make this happen you need to put your SSH public key in the authorized keys of your remote host even if the host machine is your localhost.
+You might use more than one Ansible galaxy role. So the best practice is to create a **requirements.yml** file where all the Ansible galaxy roles will be described.
 
-In a play we can add directly the hosts or set up an inventory file where all the host are well organized.
-
-<img src="./assets/ansible-hosts.png" alt="ansible hosts" width="500"/>
-
-## What is inventory?
-Inventory is a file where your remote hosts are grouped and organized. By this way you could target easily a lot of machines. It's also a file to set up all ssh configurations about the host machine.
-
-let's see how to create a hosts file.
+here an example:
 
 ```yaml
+- src: amine7777.packer
+  version: 1.0.0
 
-localhost  ansible_ssh_host=localhost
-
-machine1   ansible_ssh_host=34.126.4.1     ansible_ssh_user=centos
-
-machine2   ansible_ssh_host=34.126.3.1     ansible_ssh_user=centos
-
-[dev]
-machine1
-
-[prod]
-machine2
-
-[prod:vars]
-ansible_ssh_common_args='-o ProxyCommand="ssh -i ~/.ssh/<private_key> centos@34.126.4.1 -W %h:%p"'
+- src: amine7777.terraform
+  version: 1.0.0
 ```
 
-We can verify if Ansible reach all the hosts by running this command.
-`ansible all -m ping`
+Then after filling the requirements file we can install all the roles by using this command:
 
-In our case the host that we are targeting is localhost.
- `ansible localhost -m ping`{{execute}}
+`ansible-galaxy install -r requirements.yml`{{execute}}
+
+Then the play will be like the following:
+
+<pre class="file" data-target="clipboard">
+- hosts: localhost
+  connection: local
+  vars:
+    packer_version: 1.6.1
+    terraform_version: 0.13.2
+  roles:
+    - role: amine7777.packer
+    - role: amine7777.terraform
+</pre>
+
+As you can see we have two variables which describing respectively the version of Packer and the version of Terraform.
+
+let's replace what's in the **simple_playbook.yml** by this play and execute the playbook.
+
+`ansible-playbook simple_playbook.yml`{{execute}}
+
+`packer --version`{{execute}}
+
+`terraform --version`{{execute}}

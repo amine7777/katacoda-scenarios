@@ -48,8 +48,8 @@ Then run the following commands.
 
 We can see our playbook. Now, it's time to run it.
 
-`ansible-playbook simple_playbook.yml`{{execute
+`ansible-playbook simple_playbook.yml`{{execute}}
 
 Let's check if Packer has been installed on the local machine.
 
-`packer --version` {{execute}}
+`packer --version`{{execute}}
