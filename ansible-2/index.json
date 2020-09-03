@@ -31,7 +31,7 @@
     }
   },
   "files": [
-"simple_playbook.yml"
+"simple_playbook.yml", "requirements.yml"
 ],
   "environment": {
     "hidefinish": true,
