@@ -24,7 +24,7 @@ the role will be stored either on **.ansible/roles** or **/etc/ansible/roles** y
 Now the role that we have choosen is to install packer on the machine. Let's make a play to install packer using this role.
 
 The default variables are the following
-```yaml
+```YAML
 packer_version: 1.5.6
 packer_arch: amd64
 packer_directory_path: /usr/local/bin
