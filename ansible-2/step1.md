@@ -42,7 +42,7 @@ Let's say we would like to install a new version 1.6.1. We need add a variable w
 
 Then run the following commands.
 
-`cd /home/scrapbook/tutorial`{{execute}}
+`cd /home/amine7777/`{{execute}}
 
 `ls -la -F`{{execute}}
 

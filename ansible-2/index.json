@@ -38,7 +38,7 @@
     "hideHiddenFiles": true,
     "uilayout": "editor-terminal",
     "uisettings": "yaml",
-    "uieditorpath": "/home/scrapbook/tutorial/"
+    "uieditorpath": "/home/amine7777/"
   },
   "backend": {
     "imageid": "ubuntu"
