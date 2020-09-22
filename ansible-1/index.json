@@ -2,7 +2,7 @@
   "title": "Ansible quick start",
   "description": "Learn how to use Ansible",
   "difficulty": "Beginner",
-  "time": "30 min",
+  "time": "15 min",
   "details": {
     "steps": [
       {
@@ -45,7 +45,7 @@
     "hideHiddenFiles": true,
     "uilayout": "editor-terminal",
     "uisettings": "yaml",
-    "uieditorpath": "/home/scrapbook/tutorial/"
+    "uieditorpath": "/home/amine7777"
   },
   "backend": {
     "imageid": "ubuntu"

@@ -38,7 +38,7 @@ This is the simplest playbook that we could create.
 
 Let's copy this playbook in *simple_playbook.yml* and then execute the playbook with the following commands.
 
-`cd /home/scrapbook/tutorial`{{execute}}
+`cd /home/amine7777`{{execute}}
 
 `ls -la -F`{{execute}}
 
