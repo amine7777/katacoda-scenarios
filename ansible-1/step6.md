@@ -2,7 +2,7 @@
 
 The roles directory contains all the roles that we could execute on the hosts. Each role should contains a folder called "tasks" where the tasks will be stored in main.yml file. Sometimes, you will have to manage many variables and templates that's why you have to create folders for them too, respectively "vars" and "templates".
 
-<img src="./assets/ansible_skeleton.png" alt="ansible hosts" width="500"/>
+<img src="./assets/ansible-hosts.png" alt="ansible hosts" width="500"/>
 
 
 Let's put tasks in **roles/my_role/tasks/main.yml**.
