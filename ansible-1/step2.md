@@ -29,6 +29,7 @@ machine2
 ansible_ssh_common_args='-o ProxyCommand="ssh -i ~/.ssh/<private_key> centos@34.126.4.1 -W %h:%p"'
 ```
 
+
 <img src="./assets/overview.png" alt="ansible overview" width="500"/>
 
 We can verify if Ansible reach all the hosts by running this command.

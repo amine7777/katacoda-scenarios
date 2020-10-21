@@ -1,5 +1,5 @@
-# What's Ansible ?
+# What is Ansible Galaxy?
 
-Ansible is an open-source software provisioning, configuration management, and application-deployment tool. It runs on many Unix-like systems, and can configure both Unix-like systems as well as Microsoft Windows. It includes its own declarative language to describe system configuration.
+Ansible Galaxy is Ansible’s official hub for sharing Ansible content. Before thinking about creating an ansible roles you need to check if there is already the same role on ansible galaxy. Of course the ansible galaxy roles should be well maintained and well documented. On the other hand the same thing should be applied to make your customized roles very easy to use and understandable.
 
-<img src="./assets/ansible-schema.png" alt="ansible hosts" width="450"/>
+<img src="./assets/galaxy.png" alt="ansible hosts" width="500"/>
