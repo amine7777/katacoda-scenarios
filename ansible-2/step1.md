@@ -1,4 +1,7 @@
 
+
+ <kbd>Please wait until ansible get installed</kbd>
+
 # How to use it?
 
 First, you need to search for the ansible galaxy role that you would like to install. You can check if the provider is trustworthy by checking his code. Then you need to run this command.
