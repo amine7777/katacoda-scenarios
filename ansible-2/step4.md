@@ -4,6 +4,7 @@
 If you need to get informations about any role either on your local machine or on Ansible Galaxy you run the following command:
 
 `ansible-galaxy role info amine7777.packer`{{execute}}
+
 If the role is does not exist this command will install it for you and get you the informations.
 
 ### List all the roles
