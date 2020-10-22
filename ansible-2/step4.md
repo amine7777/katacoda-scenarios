@@ -7,6 +7,8 @@ If you need to get informations about any role either on your local machine or o
 
 If the role is does not exist this command will install it for you and get you the informations.
 
+Please hit <kbd>Ctrl</kbd> + <kbd>c</kbd> to exit.
+
 ### List all the roles
 If you would like to list all the Ansible Galaxy roles on your machine you can execute this command:
 
@@ -16,4 +18,6 @@ If you would like to list all the Ansible Galaxy roles on your machine you can e
 If your looking for a role which use certain tasks you can use the follwing command:
 
 `ansible-galaxy role search jira`{{execute}} 
+
+Please hit <kbd>Ctrl</kbd> + <kbd>c</kbd> to exit.
 
