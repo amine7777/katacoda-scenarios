@@ -4,13 +4,13 @@ You might use more than one Ansible galaxy role. So the best practice is to crea
 
 here an example:
 
-```yaml
+<pre class="file" data-target="clipboard">
 - src: amine7777.packer
   version: 1.0.0
 
 - src: amine7777.terraform
   version: 1.0.0
-```
+</pre>
 
 Then after filling the requirements file we can install all the roles by using this command:
 
@@ -23,7 +23,7 @@ Then the play will be like the following:
   connection: local
   vars:
     packer_version: 1.6.1
-    terraform_version: 0.13.2
+    terraform_version: 0.13.5
   roles:
     - role: amine7777.packer
     - role: amine7777.terraform
