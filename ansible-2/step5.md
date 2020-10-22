@@ -1,34 +1,26 @@
-# What's templates?
+# Other features
 
-Templates are used to create a generic and dynamic config files. Templates uses Jinja2 for templatization.
+### Remove a role
+In case you need to remove a role from your **local machine** you do it by runing this command: 
 
-First, we need to add this template to **roles/my_role/templates/template.j2.yml**
+`ansible-galaxy role remove amine7777.packer`{{execute}}
 
-<pre class="file" data-target="clipboard">
-{{ variable1 }}
-This line is not effected.
-{{ variable2 }}
-</pre>
+Let's see our list of roles:
 
-Let's copy this play inside **simple_playbook.yml** file and replace the old play.
+`ansible-playbook list`{{execute}}
 
-<pre class="file" data-target="clipboard">
-- hosts: dev
-  connection: local
-  vars:
-    variable1: 'Holà Chavales'
-    variable2: 'learn Jinja2 to make dynamic config files'
-  tasks:
-    - name: Create a config file
-      template:
-        src: roles/my_role/templates/template.j2.yml
-        dest: my_config_file.yml
-</pre>
+### Login to Ansible Galaxy
 
-Now after executing this command you can notice that the config file has been created.
+If you have an Ansible Galaxy account you can login by using your github credentials:
 
- `ansible-playbook -i inventory/inventory_file simple_playbook.yml`{{execute}}
+`ansible-galaxy login`{{execute}}
 
-  `ls -la -F`{{execute}}
+# Import a role to Ansible Galaxy 
 
-  `cat my_config_file.yml`{{execute}}.
+After bieng connected you can import your role to Ansible Galaxy platform by runing this command:
+
+`ansible-galaxy role import my_awesome_role`{{execute}}
+
+You can delete the role by executing this :
+
+`ansible-galaxy role delete <user>.my_awesome_role
