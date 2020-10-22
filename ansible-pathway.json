@@ -1,5 +1,16 @@
 {
   "title": "Ansible",
   "description": "Learn how to use Ansible",
-  "courses": []
+  "courses": [
+    {
+      "course_id": "ansible-1",
+      "title": "Ansible quick start",
+      "description": "Learn how to use Ansible"
+    },
+    {
+      "course_id": "ansible-2",
+      "title": "Ansible intermediate",
+      "description": "Learn how to use Ansible"
+    }
+  ]
 }
