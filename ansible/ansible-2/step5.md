@@ -15,12 +15,12 @@ If you have an Ansible Galaxy account you can login by using your github credent
 
 `ansible-galaxy login`{{execute}}
 
-# Import a role to Ansible Galaxy 
+### Import a role to Ansible Galaxy 
+Before importing you role to Ansible Galaxy website you need to put your role in a github repository,then after bieng connected you can import your role to Ansible Galaxy platform by runing this command:
 
-After bieng connected you can import your role to Ansible Galaxy platform by runing this command:
+`ansible-galaxy role import <GithubUser> my_awesome_role`
 
-`ansible-galaxy role import my_awesome_role`{{execute}}
-
+###  Delete 
 You can delete the role by executing this :
 
-`ansible-galaxy role delete <user>.my_awesome_role
+`ansible-galaxy role delete <GithubUser>.my_awesome_role`
