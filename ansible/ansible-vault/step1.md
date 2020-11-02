@@ -61,7 +61,7 @@ After saving the file and checking if your variables are encrypted you need to a
       user:
         name: my-test-user
         group: toto
-        password: '{{ user_pasword }}
+        password: '{{ user_pasword }}'
         shell: /bin/bash
         create_home: yes
         state: present
