@@ -72,7 +72,9 @@ Let's execute our playbook again but this time we are going to ask for the vault
 
 `ansible-playbook simple_playbook.yml --ask-vault-pass`{{execute}}
 
-Now you need to enter the password that you have chosen for **.secret.yml** file. After entring the password ansible create a user.
+Now you need to enter the password that you have chosen for **.secret.yml** file. After entring the password ansible will create a user.
+
+
 
 
  
