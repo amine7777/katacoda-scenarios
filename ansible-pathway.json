@@ -1,14 +1,19 @@
 {
-  "title": "Ansible",
+  "title": "ansible",
   "description": "Learn how to use Ansible",
   "courses": [
     {
-      "course_id": "ansible-1",
+      "course_id": "quick-start",
       "title": "Ansible quick start",
       "description": "Learn how to use Ansible"
     },
     {
-      "course_id": "ansible-2",
+      "course_id": "ansible-vault",
+      "title": "Ansible Vault",
+      "description": "This scenario is about using Ansible Vault to encrypt Data."
+    },
+    {
+      "course_id": "ansible-galaxy",
       "title": "Ansible intermediate",
       "description": "Learn how to use Ansible"
     }
