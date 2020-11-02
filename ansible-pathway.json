@@ -10,12 +10,12 @@
     {
       "course_id": "ansible-vault",
       "title": "Ansible Vault",
-      "description": "This scenario is about using Ansible Vault to encrypt Data."
+      "description": "NOT READY YET"
     },
     {
       "course_id": "ansible-galaxy",
-      "title": "Ansible intermediate",
-      "description": "Learn how to use Ansible"
+      "title": "Ansible Galaxy",
+      "description": "Learn how to use Ansible Galaxy"
     }
   ]
 }
