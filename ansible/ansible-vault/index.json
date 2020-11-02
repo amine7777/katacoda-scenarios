@@ -34,8 +34,7 @@
       "text": "finish.md"
     }
   },
-  "files": "simple_playbook.yml"
-,
+  "files": ["simple_playbook.yml"],
   "environment": {
     "hidefinish": true,
     "hideHiddenFiles": true,
