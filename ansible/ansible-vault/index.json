@@ -1,13 +1,14 @@
 {
   "title": "Ansible Vault",
-  "description": "NOT READY YET.",
-  "difficulty": "Intermediate",
-  "time": "15",
+  "description": "Learn how to use Ansible Vault",
+  "difficulty": "intermediate",
+  "time": "15 min",
   "details": {
     "steps": [
       {
         "title": "Step 1",
-        "text": "step1.md"
+        "text": "step1.md",
+        "code": "install-ansible.sh"
       },
       {
         "title": "Step 2",
@@ -33,10 +34,17 @@
       "text": "finish.md"
     }
   },
+  "files": [
+"simple_playbook.yml"
+],
   "environment": {
-    "uilayout": "editor-terminal"
+    "hidefinish": true,
+    "hideHiddenFiles": true,
+    "uilayout": "editor-terminal",
+    "uisettings": "yaml",
+    "uieditorpath": "/home/amine7777/"
   },
   "backend": {
-    "imageid": "ubuntu1804"
+    "imageid": "ubuntu"
   }
 }
