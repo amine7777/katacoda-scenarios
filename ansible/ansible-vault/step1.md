@@ -2,7 +2,7 @@
 
 # How to use Ansible Vault?
 
-Let 's say we would like to encrypt a file where we are going to store a password. Our Ansible playbook will be the following:
+Let 's say we would like to create a user with a password but we would like to hide that password. Our first Ansible playbook will be the following:
 
 <pre class="file" data-target="clipboard">
 ---
