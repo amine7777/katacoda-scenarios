@@ -25,7 +25,7 @@ Let 's say we would like to encrypt a file where we are going to store a passwor
     - name: Create a user
       user:
         name: "{{ user_name }}"
-        group: {{ group_name }}"
+        group: "{{ group_name }}"
         password: "{{ 'password12345' | password_hash('sha512') }}"
         shell: /bin/bash
         create_home: yes
@@ -42,9 +42,9 @@ Let 's say we would like to encrypt a file where we are going to store a passwor
 
 Please copy the playbook in the  **simple_playbook.yml** file.
 
-As you can see the password here is visible which is something that we dont want to have.
+As you can see the password here is visible which is something that we dont want to have. Plus, if we use a plain text password this may not work, that's why our password should be hashed by using jinja2 filters which handle the hashing ***password_hash('sha512')***.
 
-The playbook made to  create a user and our goal here is to hide the user password with Ansible vault.
+The playbook made to create a user and our goal here is to hide the user password with Ansible vault.
 
 Let's create our **.secret.yml** file where we are going to encrypt our password.
 
@@ -94,7 +94,7 @@ After saving the file and checking if your variables are encrypted you need to a
     - name: Create a user
       user:
         name: "{{ user_name }}"
-        group: {{ group_name }}"
+        group: "{{ group_name }}"
         password: "{{ user_password | password_hash('sha512') }}"
         shell: /bin/bash
         create_home: yes
