@@ -14,7 +14,7 @@ Let 's say we would like to create a user with a password but we would like to h
   vars:
     user_name: john
     group_name: doe
-    sudoers_line: "%john ALL=(ALL) ALL"
+    sudoers_line: "%doe ALL=(ALL) ALL"
     
   tasks:
     - name: Create a group
@@ -37,6 +37,7 @@ Let 's say we would like to create a user with a password but we would like to h
         state: present
         line: '{{ sudoers_line }}'
         insertafter: 'EOF'
+
 </pre>
 
 Please copy the playbook in the  **simple_playbook.yml** file.
