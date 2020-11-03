@@ -29,6 +29,13 @@ choose a vault password.
 
 Now our playbook is encrypted.
 
+# How to change the vault password
+
+If you want to change your vault password of the encrypted file there is a command to do that.
+
+`ansible-vault re-key simple_playbook.yml`{{execute}}
+
+
 # How to remove encryption from a file
 
 Of course we are not going to leave our playbook encrypted like that. That's why we need to run this command:
@@ -43,11 +50,13 @@ As you can see our playbook is now decrypted.
 
 This can be used in step 1 because we just need to encrypt one string value or two otherwise the file will be a mess.
 
-Let's try to encrypt the user_name inside out playbook.
+Let's try to imagine a string and encrypt it 
 
-`ansible-vault encrypt_string john`{{execute}}
+`ansible-vault encrypt_string 'awesome_string_value' --name awesome_key`{{execute}}
 
-`cat simple_playbook.yml`{{execute}}
+Then all what we have to is do is to copy the output and put this in any playbook and execute it with asking the vault password **--ask-vault-pass**.
+
+
 
 
 

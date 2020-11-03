@@ -113,7 +113,9 @@ Enter the password
 password12345
 ```
 
-The folder has been created.
+The folder has been created. Let's exit now.
+
+`exit`{{execute}}
 
 
 
