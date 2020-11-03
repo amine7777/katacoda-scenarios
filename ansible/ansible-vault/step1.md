@@ -63,7 +63,7 @@ user_password_vault: 'password12345'
 Now save the file by hiting 
  <kbd>ESC</kbd>  then <kbd>:wq!</kbd>.
 
-If we try now to display the **.secrets.yml** file we will get a strange output with many numbers which means that our file is encrypted :lock:.
+If we try now to display the **.secrets.yml** file we will get a strange output with many numbers which means that our file is encrypted.
 
 `cat .secrets.yml`{{execute}}
 
@@ -81,7 +81,7 @@ Then change the user password in the **Create a user** task.
 password: "{{ user_password | password_hash('sha512') }}"
 ```
 
-Now we just need to **user_password** variables which calls our encrypted variable in **.secrets.yml** file. Add this in the **vars** field.
+Now we just need to **user_password** variable which calls our encrypted variable in **.secrets.yml** file. Add this in the **vars** field.
 
 ```yaml
 user_password: '{{ user_password_vault }}'
@@ -105,7 +105,7 @@ Let's try to create a folder using john user.
 
 `su john`{{execute}}
 
-`mkdir new_folder`{{execute}}
+`sudo mkdir new_folder`{{execute}}
 
 Enter the password
 
