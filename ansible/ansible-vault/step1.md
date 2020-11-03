@@ -10,20 +10,34 @@ Let 's say we would like to encrypt a file where we are going to store a passwor
   connection: local
   become: yes
   become_user: root
+  
+  vars:
+    user_name: john
+    group_name: doe
+    sudoers_line: "%john ALL=(ALL) ALL"
+    
   tasks:
     - name: Create a group
       group:
-        name: doe
+        name: "{{ group_name }}"
         state: present
 
     - name: Create a user
       user:
-        name: john
-        groups: sudo, doe
-        password: 'my_awesome_password'
+        name: "{{ user_name }}"
+        group: {{ group_name }}"
+        password: "{{ 'password12345' | password_hash('sha512') }}"
         shell: /bin/bash
         create_home: yes
         state: present
+        
+    - name: Add user to sudoers 
+      lineinfile:
+        dest: /etc/sudoers
+        state: present
+        line: '{{ sudoers_line }}'
+        insertafter: 'EOF'
+        validate: /usr/sbin/visudo -cf %s
 </pre>
 
 Please copy the playbook in the  **simple_playbook.yml** file.
@@ -43,7 +57,7 @@ This command will create an encrypted file and it will prompt a message to set u
 Please hit  <kbd>i</kbd> to insert text and add this line to the **.secret.yml** file 
 
 ```yaml
-user_password: 'my_awesome_password'
+user_password: 'password12345'
 
 ```
 Now save the file by hiting 
@@ -61,22 +75,38 @@ After saving the file and checking if your variables are encrypted you need to a
   connection: local
   become: yes
   become_user: root
+
   vars_files:
-    - "./.secret.yml"
+    - "./.secrets.yml"
+  
+  vars:
+    user_name: john
+    group_name: doe
+    sudoers_line: "%john ALL=(ALL) ALL"
+    
+    
   tasks:
     - name: Create a group
       group:
-        name: doe
+        name: "{{ group_name }}"
         state: present
 
     - name: Create a user
       user:
-        name: john
-        groups: sudo, doe
-        password: '{{ user_pasword }}'
+        name: "{{ user_name }}"
+        group: {{ group_name }}"
+        password: "{{ user_password | password_hash('sha512') }}"
         shell: /bin/bash
         create_home: yes
         state: present
+        
+    - name: Add user to sudoers
+      lineinfile:
+        dest: /etc/sudoers
+        state: present
+        line: '{{ sudoers_line }}'
+        insertafter: 'EOF'
+        validate: /usr/sbin/visudo -cf %s
 </pre>
 
 
@@ -86,10 +116,9 @@ Let's execute our playbook again but this time we are going to ask for the vault
 
 Now you need to enter the vault password that you have chosen for **.secret.yml** file. After entring the password ansible will create a user.
 
-let's check:
-`cat /etc/group`{{execute}}
+let's check
 
-`cat /etc/passwd`{{execute}}
+`cat /etc/group`{{execute}}
 
 The group and the user have been created.
 
