@@ -37,7 +37,6 @@ Let 's say we would like to create a user with a password but we would like to h
         state: present
         line: '{{ sudoers_line }}'
         insertafter: 'EOF'
-        validate: /usr/sbin/visudo -cf %s
 </pre>
 
 Please copy the playbook in the  **simple_playbook.yml** file.
