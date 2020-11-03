@@ -57,7 +57,7 @@ This command will create an encrypted file and it will prompt a message to set u
 Please hit  <kbd>i</kbd> to insert text and add this line to the **.secret.yml** file 
 
 ```yaml
-user_password: 'password12345'
+user_password_vault: 'password12345'
 
 ```
 Now save the file by hiting 
@@ -69,45 +69,24 @@ If we try now to display the **.secrets.yml** file we will get a strange output 
 
 After saving the file and checking if your variables are encrypted you need to adapt your playbook by calling the user_password variable.
 
-<pre class="file" data-target="clipboard">
----
-- hosts: localhost
-  connection: local
-  become: yes
-  become_user: root
+first you need to add the **.secrets.yml** file to the playbook. Place these lines before **vars**.
 
-  vars_files:
+```yaml
+ vars_files:
     - "./.secrets.yml"
-  
-  vars:
-    user_name: john
-    group_name: doe
-    sudoers_line: "%john ALL=(ALL) ALL"
-    
-    
-  tasks:
-    - name: Create a group
-      group:
-        name: "{{ group_name }}"
-        state: present
+```
+Then change the user password in the **Create a user** task.
 
-    - name: Create a user
-      user:
-        name: "{{ user_name }}"
-        group: "{{ group_name }}"
-        password: "{{ user_password | password_hash('sha512') }}"
-        shell: /bin/bash
-        create_home: yes
-        state: present
-        
-    - name: Add user to sudoers
-      lineinfile:
-        dest: /etc/sudoers
-        state: present
-        line: '{{ sudoers_line }}'
-        insertafter: 'EOF'
-        validate: /usr/sbin/visudo -cf %s
-</pre>
+```yaml
+password: "{{ user_password | password_hash('sha512') }}"
+```
+
+Now we just need to **user_password** variables which calls our encrypted variable in **.secrets.yml** file. Add this in the **vars** field.
+
+```yaml
+user_password: '{{ user_password_vault }}'
+```
+
 
 
 Let's execute our playbook again but this time we are going to ask for the vault password.
@@ -122,6 +101,19 @@ let's check
 
 The group and the user have been created.
 
+Let's try to create a folder using john user.
+
+`su john`{{execute}}
+
+`mkdir new_folder`{{execute}}
+
+Enter the password
+
+```yaml
+password12345
+```
+
+The folder has been created.
 
 
 
