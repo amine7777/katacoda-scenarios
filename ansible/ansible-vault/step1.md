@@ -11,10 +11,15 @@ Let 's say we would like to encrypt a file where we are going to store a passwor
   become: yes
   become_user: root
   tasks:
+    - name: Create a group
+      group:
+        name: doe
+        state: present
+
     - name: Create a user
       user:
-        name: my-test-user
-        group: toto
+        name: john
+        groups: sudo, doe
         password: 'my_awesome_password'
         shell: /bin/bash
         create_home: yes
@@ -59,10 +64,15 @@ After saving the file and checking if your variables are encrypted you need to a
   vars_files:
     - "./.secret.yml"
   tasks:
+    - name: Create a group
+      group:
+        name: doe
+        state: present
+
     - name: Create a user
       user:
-        name: my-test-user
-        group: toto
+        name: john
+        groups: sudo, doe
         password: '{{ user_pasword }}'
         shell: /bin/bash
         create_home: yes
@@ -75,6 +85,14 @@ Let's execute our playbook again but this time we are going to ask for the vault
 `ansible-playbook simple_playbook.yml --ask-vault-pass`{{execute}}
 
 Now you need to enter the vault password that you have chosen for **.secret.yml** file. After entring the password ansible will create a user.
+
+let's check:
+`cat /etc/group`{{execute}}
+
+`cat /etc/passwd`{{execute}}
+
+The group and the user have been created.
+
 
 
 
