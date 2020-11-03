@@ -23,17 +23,19 @@ Let 's say we would like to encrypt a file where we are going to store a passwor
 
 Please copy the playbook in the  **simple_playbook.yml** file.
 
-As you can the password here is visible which is something that we dont want to have.
+As you can see the password here is visible which is something that we dont want to have.
 
 The playbook made to  create a user and our goal here is to hide the user password with Ansible vault.
 
 Let's create our **.secret.yml** file where we are going to encrypt our password.
 
+`cd /home/amine7777`{{execute}}
+
 `ansible-vault create .secrets.yml`{{execute}}
 
-This command will create an encrypted file and it will prompt a message to set up the vault password that you would like to use. After entering the password you need to put all the sensitives data inside.
+This command will create an encrypted file and it will prompt a message to set up the vault password that you would like to use. After entering the vault password you need to put all the sensitives data inside.
 
-Please add this line to the **.secret.yml** file 
+Please hit  <kbd>i</kbd> to insert text and add this line to the **.secret.yml** file 
 
 ```yaml
 user_password: 'my_awesome_password'
@@ -44,7 +46,7 @@ Now save the file by hiting
 
 If we try now to display the **.secrets.yml** file we will get a strange output with many numbers which means that our file is encrypted :lock:.
 
-`cat .secret.yml`{{execute}}
+`cat .secrets.yml`{{execute}}
 
 After saving the file and checking if your variables are encrypted you need to adapt your playbook by calling the user_password variable.
 
@@ -72,7 +74,7 @@ Let's execute our playbook again but this time we are going to ask for the vault
 
 `ansible-playbook simple_playbook.yml --ask-vault-pass`{{execute}}
 
-Now you need to enter the password that you have chosen for **.secret.yml** file. After entring the password ansible will create a user.
+Now you need to enter the vault password that you have chosen for **.secret.yml** file. After entring the password ansible will create a user.
 
 
 
