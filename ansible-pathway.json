@@ -10,7 +10,7 @@
     {
       "course_id": "ansible-vault",
       "title": "Ansible Vault",
-      "description": "NOT READY YET"
+      "description": "Learn how to use Ansible Vault"
     },
     {
       "course_id": "ansible-galaxy",
