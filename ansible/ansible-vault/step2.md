@@ -33,8 +33,9 @@ Now our playbook is encrypted.
 
 If you want to change your vault password of the encrypted file there is a command to do that.
 
-`ansible-vault re-key simple_playbook.yml`{{execute}}
+`ansible-vault rekey simple_playbook.yml`{{execute}}
 
+You need to enter your old vault password and then the new vault password.
 
 # How to remove encryption from a file
 
