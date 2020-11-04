@@ -24,9 +24,7 @@ If we execute the Vagrantfile using ***vagrant up*** the terminal will prompt a 
 
 If we want to use ansible-vault inside a pipeline we need to save the vault password in Gitlab. We have to go inside the project then
 
-settings → CI/CD → Variables and save the variable there.
-
-<img src="./assets/ci1.png" alt="CI" width="200"/>
+settings → CI/CD → Variables and save the variable there as ANSIBLE_VAULT_PASSWORD.
 
 After that we need to store the vault password inside a file during the pipeline execution. The pipeline runs with docker container which is stateless so the file will not be saved inside the container.
 
