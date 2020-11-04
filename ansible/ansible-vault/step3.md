@@ -26,7 +26,7 @@ If we want to use ansible-vault inside a pipeline we need to save the vault pass
 
 settings → CI/CD → Variables and save the variable there.
 
-<img src="./assets/ci1.png" />
+<img src="./assets/ci1.png" alt="CI" width="200"/>
 
 After that we need to store the vault password inside a file during the pipeline execution. The pipeline runs with docker container which is stateless so the file will not be saved inside the container.
 
