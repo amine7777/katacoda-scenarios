@@ -16,6 +16,11 @@
       "course_id": "ansible-galaxy",
       "title": "Ansible Galaxy",
       "description": "Learn how to use Ansible Galaxy"
+    },
+    {
+      "course_id": "ansible-molecule",
+      "title": "ansible-molecule",
+      "description": "This scenario will introduce you to Molecule to test Ansible roles."
     }
   ]
 }
