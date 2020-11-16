@@ -32,12 +32,25 @@ Now, Let's delete the molecule folder.
 
 `rm -rf molecule`{{execute}}
 
+`ls -la -F`{{execute}}
+
 Molecule can have multiples scenarios of testing but first you need to have a default testing scenario this is how we create one.
 
 `molecule init scenario`{{execute}}
 
+`ls -la -F`{{execute}}
+
 If we want a customized scenario which for example runs on ubuntu distribution, we can create it with the following command.
 
-`molecule init scenario`{{execute}}
+`molecule init scenario ubuntu`{{execute}}
+
+`cd molecule`{{execute}}
+
+`ls -la -F`{{execute}}
+
+We can see our 2 scenarios default and ubuntu. Let's see what's in the folder and the files.
+
+
+
 
 
