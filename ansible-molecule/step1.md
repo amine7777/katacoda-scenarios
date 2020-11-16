@@ -14,7 +14,8 @@ once the image is downloaded we need to run our container mounted to the docker 
 
 `docker run -it -v /var/run/docker.sock:/var/run/docker.sock amine7777/molecule:3.0.8`{{execute}}
 
-We need to check if docker is runing in our container. `docker info` {{execute}}
+We need to check if docker is runing in our container. 
+`docker info` {{execute}}
 
 With Molecule we can either create a new galaxy alike role with molecule folder inside or set up a molecule scenario in an existing role.
 

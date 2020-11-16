@@ -8,7 +8,7 @@ Let's understand a bit the molecule files.
 
 `cat molecule.yml`{{execute}}
 
-As we can see here this is the molecule configuration which contain the driver, plateform . provisionner and verifier. We can for example change the image that we want to use, add some options for the Ansible provisionner.
+As we can see here this is the molecule configuration which contain the driver, platforms . provisioner and verifier. We can for example change the image that we want to use and also add some options for the Ansible provisioner.
 
 Let's see the other most important file.
 
@@ -50,4 +50,4 @@ Now let's test these tasks with molecule. Molecule with create a container and e
 
 `cd ..`{{execute}}
 
-`molecule test`{{excute}}
+`molecule test`{{execute}}
