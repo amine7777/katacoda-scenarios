@@ -1,26 +1,26 @@
 {
   "title": "ansible",
-  "description": "Learn how to use Ansible",
+  "description": "Learn how to use Ansible.",
   "courses": [
     {
       "course_id": "quick-start",
       "title": "Ansible quick start",
-      "description": "Learn how to use Ansible"
+      "description": "Learn how to use Ansible."
     },
     {
       "course_id": "ansible-vault",
       "title": "Ansible Vault",
-      "description": "Learn how to use Ansible Vault"
+      "description": "Learn how to use Ansible Vault."
     },
     {
       "course_id": "ansible-galaxy",
       "title": "Ansible Galaxy",
-      "description": "Learn how to use Ansible Galaxy"
+      "description": "Learn how to use Ansible Galaxy."
     },
     {
       "course_id": "ansible-molecule",
       "title": "ansible-molecule",
-      "description": "This scenario will introduce you to Molecule to test Ansible roles."
+      "description": "Learn how to use Molecule."
     }
   ]
 }
