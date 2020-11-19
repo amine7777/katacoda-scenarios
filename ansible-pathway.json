@@ -19,7 +19,7 @@
     },
     {
       "course_id": "ansible-molecule",
-      "title": "ansible-molecule",
+      "title": "Ansible Molecule",
       "description": "Learn how to use Molecule."
     }
   ]
