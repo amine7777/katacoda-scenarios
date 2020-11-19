@@ -12,7 +12,7 @@ Then we can get into the container.
 
 Let's check if the folder is really there.
 
-`cat /tmp`{{execute}}
+`ls /tmp`{{execute}}
 
 We can see that the folder exists.
 
