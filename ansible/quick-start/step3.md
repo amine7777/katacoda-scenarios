@@ -19,7 +19,7 @@ Then we are going to add this task at the end of **simple_playbook.yml** just be
 <pre class="file" data-target="clipboard">
 - name: Create a folder
   file:
-    path: /home/scrapbook/tutorial/group_vars
+    path: /home/amine7777/group_vars
     state: directory
     owner: root
     group: root
@@ -41,7 +41,7 @@ Let's replace the task that we have added before with this task.
 <pre class="file" data-target="clipboard">
 - name: Create folders
   file:
-    path: /home/scrapbook/tutorial/{{ item }}
+    path: /home/amine7777/{{ item }}
     state: directory
     owner: root
     group: root
@@ -71,7 +71,7 @@ The **file** module could also create files by changing the state. We are going 
 <pre class="file" data-target="clipboard">
 - name: Create files
   file:
-    path: /home/scrapbook/tutorial/{{ item }}
+    path: /home/amine7777/{{ item }}
     state: touch
     owner: root
     group: root
