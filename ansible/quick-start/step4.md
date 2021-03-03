@@ -43,7 +43,7 @@ Now we can re-execute the playbook.
    tasks:
      - name: Create folders
        file:
-         path: /home/scrapbook/tutorial/{{ item }}
+         path: /home/amine7777/{{ item }}
          state: directory
          owner: root
          group: root
