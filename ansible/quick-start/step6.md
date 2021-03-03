@@ -15,7 +15,7 @@ Let's put tasks in **roles/my_role/tasks/main.yml**.
 - name: Create a config file
   template:
     src: roles/my_role/templates/template.j2.yml
-    dest: my_config_file.ym
+    dest: /home/amine7777/my_config_file.ym
 </pre>
 
 Now after setting tasks we need to change the **simple_playbook.yml** again and replace the old play with this play.
